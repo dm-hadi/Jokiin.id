@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasain.Ah - Solusi Jasa Kreatif & Akademik Masa Depan</title>
+    <title>Jasain.Aja - Solusi Jasa Kreatif & Akademik Masa Depan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -208,7 +208,7 @@
             font-size: 0.82rem;
             font-weight: 600;
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(59, 130, 246, 0.2);
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -229,7 +229,7 @@
         .hero p {
             font-size: 1.15rem;
             color: var(--text-muted);
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
             max-width: 720px;
             line-height: 1.7;
         }
@@ -578,22 +578,174 @@
             .portfolio-item { width: 260px; }
         }
 
-        /* --- SAFE VERTICAL ANIMATION TRIGGER --- */
-        .from-center-up, .from-bottom-btn {
+        /* --- PREMIUM SLOW ANIMATION --- */
+
+        .from-center-up,
+        .from-bottom-btn {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(60px);
+
+            transition:
+                opacity 2.3s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 2.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .from-center-up.animate, .from-bottom-btn.animate {
+
+        .from-center-up.animate,
+        .from-bottom-btn.animate {
             opacity: 1;
             transform: translateY(0);
         }
+
         .simple-drop {
-            animation: sDrop 0.5s forwards ease-out;
+            animation: sDrop 0.8s forwards ease-out;
         }
+
         @keyframes sDrop {
-            from { transform: translateY(-15px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-25px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* ========================================= */
+        /* SPACING */
+        /* ========================================= */
+
+        .section-subtitle {
+            margin-bottom: 3rem;
+        }
+
+        .filter-buttons {
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            gap: 1.8rem;
+        }
+
+        .steps-container {
+            gap: 1.8rem;
+            margin-top: 3.5rem;
+        }
+
+        /* ========================================= */
+        /* SERVICE CARD HOVER */
+        /* ========================================= */
+
+        .service-card {
+            transition:
+                transform .8s ease,
+                box-shadow .8s ease,
+                border-color .8s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.03);
+
+            border-color: rgba(59,130,246,.55);
+
+            box-shadow:
+                0 25px 50px rgba(59,130,246,.18),
+                0 0 30px rgba(59,130,246,.12);
+        }
+
+        .service-img-wrapper img {
+            transition: transform 1.2s ease;
+        }
+
+        .service-card:hover .service-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .service-tag {
+            transition: all .6s ease;
+        }
+
+        .service-card:hover .service-tag {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 20px rgba(59,130,246,.25);
+        }
+
+        .service-info h3 {
+            transition: .5s ease;
+        }
+
+        .service-card:hover h3 {
+            color: #60a5fa;
+        }
+
+        /* ========================================= */
+        /* ORDER CARD HOVER */
+        /* ========================================= */
+
+        .step-card {
+            transition:
+                transform .8s ease,
+                box-shadow .8s ease,
+                border-color .8s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px) scale(1.02);
+
+            border-color: rgba(59,130,246,.45);
+
+            box-shadow:
+                0 20px 40px rgba(59,130,246,.14),
+                0 0 25px rgba(59,130,246,.08);
+        }
+
+        .step-num {
+            transition: all .7s ease;
+        }
+
+        .step-card:hover .step-num {
+            transform: scale(1.15);
+
+            background: var(--primary);
+            color: white;
+
+            box-shadow:
+                0 0 25px rgba(59,130,246,.45);
+        }
+
+        .step-card h3 {
+            transition: .5s ease;
+        }
+
+        .step-card:hover h3 {
+            color: #60a5fa;
+        }
+
+        /* ========================================= */
+        /* BUTTON */
+        /* ========================================= */
+
+        .btn-cta {
+            transition:
+                transform .7s ease,
+                box-shadow .7s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 0 35px rgba(59,130,246,.35);
+        }
+
+        .filter-btn {
+            transition: all .5s ease;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -603,7 +755,7 @@
 
     <header>
         <div class="nav-container">
-            <a href="#home" class="logo">Jasain<span>.ah</span></a>
+            <a href="#home" class="logo">Jasain<span>.Aja</span></a>
             
             <nav id="mainNav">
                 <ul>
@@ -630,7 +782,14 @@
             <div class="hero-content from-center-up" id="animHero">
                 <span class="hero-badge">⚡ Next-Gen Academic & Creative Hub</span>
                 <h1>Solusi Kebutuhan Jasa <br><span>Kreatif & Akademik</span> Anda</h1>
-                <p>Singkirkan beban tumpukan deadline yang bikin stres. Jasain.Ah membantu Anda menyelesaikan administrasi ketik, tugas tulis tangan eksklusif, visual branding ilustrasi, hingga produksi foto katalog produk komersial secara profesional, tepat waktu, dan rahasia jaminan aman.</p>
+                <p><h2>Deadline menumpuk? Serahkan pada ahlinya.</h2>
+
+                <h2>Jasain<span style="color: #4a7aff;">.Aja</span></h2> <br>menyediakan layanan profesional untuk kebutuhan akademik, administrasi, dan bisnis Anda. Mulai dari pengetikan dokumen, tugas tulis tangan eksklusif, desain branding, ilustrasi kreatif, hingga foto katalog produk yang siap meningkatkan nilai jual bisnis Anda.
+
+                Dengan komitmen pada kualitas, ketepatan waktu, dan kerahasiaan pelanggan, kami memastikan setiap proyek selesai dengan hasil terbaik tanpa mengganggu fokus Anda pada hal yang lebih penting.
+
+                Satu solusi untuk berbagai kebutuhan jasa profesional. Cepat, aman, dan terpercaya.
+                </p>
                 
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; width: 100%;">
                     <a href="#jasa" class="btn-cta" style="padding: 1rem 2rem; font-size: 0.95rem; border-radius: 14px;">Jelajahi Layanan</a>
@@ -658,7 +817,7 @@
     <section class="services-section" id="jasa">
         <div class="section-container">
             <h2 class="section-title from-center-up" id="animJasaTitle">Layanan Utama</h2>
-            <p class="section-subtitle from-center-up" id="animJasaSubtitle">Pilih kategori layanan terbaik yang dirancang khusus untuk mempermudah hidup dan bisnis Anda</p>
+            <p class="section-subtitle from-center-up" id="animJasaSubtitle">Pilih layanan terbaik yang kami sediakan untuk mendukung produktivitas, menghemat waktu, dan membantu bisnis Anda berkembang dengan hasil kerja yang profesional, tepat waktu, dan terpercaya.</p>
             
             <div class="filter-buttons from-bottom-btn" id="animFilterBtn">
                 <button class="filter-btn active" onclick="filterServices('all')">Semua Jasa</button>
@@ -722,7 +881,7 @@
     <section class="portfolio-section" id="portofolio">
         <div class="section-container">
             <h2 class="section-title from-center-up" id="animPortoTitle">Portofolio Hasil Jasa</h2>
-            <p class="section-subtitle from-center-up" id="animPortoSubtitle">Galeri proyek nyata tanpa batas yang berputar otomatis secara kontinu</p>
+            <p class="Ssection-subtitle from-center-up" id="animPortoSubtitle">Lihat berbagai hasil karya dan proyek yang telah kami kerjakan sebagai bukti kualitas layanan, profesionalisme, dan kepuasan pelanggan Jasain.Aja.</p>
         </div>
 
         <div class="marquee-wrapper">
@@ -851,7 +1010,7 @@
     </section>    
 
     <footer>
-        <p>&copy; 2026 Jasain.Ah Hak Cipta Dilindungi Undang-Undang.</p>
+        <p>&copy; 2026 Jasain.Aja Hak Cipta Dilindungi Undang-Undang.</p>
     </footer>
 
     <script>
@@ -950,3 +1109,4 @@
     
 </body>
 </html>
+
